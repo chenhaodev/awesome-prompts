@@ -1,0 +1,6 @@
+[submodule "examples/3rd-party/CheatSheets-for-Developers"]
+	path = examples/3rd-party/CheatSheets-for-Developers
+	url = https://github.com/crescentpartha/CheatSheets-for-Developers
+[submodule "examples/3rd-party/cheatsheets"]
+	path = examples/3rd-party/cheatsheets
+	url = https://github.com/jin-zhe/cheatsheets/

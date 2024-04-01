@@ -1,0 +1,24 @@
+# Use an alias for the base image for easier updates
+FROM python:3.10 as base
+
+# Set model
+ENV MODEL=mlabonne/NeuralMonarch-7B-GGUF
+ENV QUANT=Q4_K_M
+ENV CHAT_TEMPLATE=mistral-instruct
+
+# Set the working directory
+WORKDIR /app
+
+# Install Python requirements
+COPY ./requirements.txt /app/
+RUN pip install --no-cache-dir --upgrade -r requirements.txt
+
+# Download model
+RUN MODEL_NAME_FILE=$(echo ${MODEL#*/} | tr '[:upper:]' '[:lower:]' | sed 's/-gguf$//') && \
+    wget https://huggingface.co/${MODEL}/resolve/main/${MODEL_NAME_FILE}.${QUANT}.gguf -O model.gguf
+
+# Copy the rest of your application
+COPY . .
+
+# Command to run the application
+CMD ["python", "app.py"]
