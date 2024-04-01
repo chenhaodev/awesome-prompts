@@ -4,3 +4,6 @@
 [submodule "examples/3rd-party/cheatsheets"]
 	path = examples/3rd-party/cheatsheets
 	url = https://github.com/jin-zhe/cheatsheets/
+[submodule "examples/3rd-party/prompts-for-health"]
+	path = examples/3rd-party/prompts-for-health
+	url = https://github.com/FortaTech/prompts-for-health
