@@ -7,3 +7,6 @@
 [submodule "examples/3rd-party/prompts-for-health"]
 	path = examples/3rd-party/prompts-for-health
 	url = https://github.com/FortaTech/prompts-for-health
+[submodule "examples/3rd-party/promptbase"]
+	path = examples/3rd-party/promptbase
+	url = https://github.com/microsoft/promptbase
